@@ -1,22 +1,40 @@
 package com.masai.modal;
 
 public class Buyer {
-	private int buyerId;
+	private int bid;
 	private String name;
 	private String email;
 	private String pass;
-	public Buyer(int buyerId, String name, String email, String pass) {
+	private String location;
+	public Buyer() {
+		// TODO Auto-generated constructor stub
+	}
+	public Buyer(int bid, String name, String email, String pass,String location) {
 		super();
-		this.buyerId = buyerId;
+		this.bid = bid;
 		this.name = name;
 		this.email = email;
 		this.pass = pass;
+		this.location=location;
 	}
-	public int getBuyerId() {
-		return buyerId;
+	
+	
+	@Override
+	public String toString() {
+		return "Buyer [bid=" + bid + ", name=" + name + ", email=" + email + ", pass=" + pass + ", location=" + location
+				+ "]";
 	}
-	public void setBuyerId(int buyerId) {
-		this.buyerId = buyerId;
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public int getBid() {
+		return bid;
+	}
+	public void setBid(int bid) {
+		this.bid = bid;
 	}
 	public String getName() {
 		return name;
@@ -36,11 +54,5 @@ public class Buyer {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
-	@Override
-	public String toString() {
-		return "Buyer [buyerId=" + buyerId + ", name=" + name + ", email=" + email + ", pass=" + pass
-				+ ", getBuyerId()=" + getBuyerId() + ", getName()=" + getName() + ", getEmail()=" + getEmail()
-				+ ", getPass()=" + getPass() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
-	}
+	
 }
